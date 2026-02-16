@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CodeLearn</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email_hint">Username or Email</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="register_link">Register</string>
+    <string name="login_link">Login</string>
+
+    <!-- Strings for MainActivity -->
+    <string name="logo_icon">⚡</string>
+    <string name="logout">Logout</string>
+    <string name="hero_title">Learn to Code Anytime, Anywhere</string>
+    <string name="hero_subtitle">Practice coding, build skills, and grow your future.</string>
+    <string name="get_started">Get Started</string>
+    <string name="popular_courses">Popular Courses</string>
+    <string name="course_html">HTML</string>
+    <string name="course_css">CSS</string>
+    <string name="course_js">JavaScript</string>
+    <string name="course_python">Python</string>
+    <string name="course_java">Java</string>
+    <string name="course_cpp">C++</string>
+    <string name="course_sql">SQL</string>
+    <string name="follow_us">Follow us</string>
+    <string name="twitter">🐦 Twitter</string>
+    <string name="facebook">📘 Facebook</string>
+    <string name="linkedin">💼 LinkedIn</string>
+</resources>
