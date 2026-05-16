@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website: .btn-secondary { background: rgba(255,255,255,0.95); border: 1px solid rgba(255,255,255,0.75); box-shadow } -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#11142A5B">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F2FFFFFF" />
+            <stroke android:width="1dp" android:color="#BFFFFFFF" />
+            <corners android:radius="999dp" />
+        </shape>
+    </item>
+</ripple>

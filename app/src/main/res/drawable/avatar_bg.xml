@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website: .testimonial-avatar { background: linear-gradient(135deg, var(-primary), #ffbb4c); border-radius: 50% } -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:startColor="#FF7A1A"
+        android:endColor="#FFBB4C"
+        android:angle="135" />
+</shape>

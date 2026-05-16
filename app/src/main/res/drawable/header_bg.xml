@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website: .site-header { backdrop-filter: blur(18px); background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(35,51,91,0.08) } -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F5FFFFFF" />
+        </shape>
+    </item>
+    <item android:gravity="bottom" android:height="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1423335B" />
+        </shape>
+    </item>
+</layer-list>

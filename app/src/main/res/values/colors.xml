@@ -1,0 +1,38 @@
+<resources>
+    <!-- Exact website color palette -->
+    <color name="primary">#FF7A1A</color>
+    <color name="primaryStrong">#FF6A00</color>
+    <color name="primaryLight">#FFBB4C</color>
+    <color name="primaryTint">#14FF7A1A</color>  <!-- rgba(255,122,26,0.08) -->
+    <color name="primaryTintStrong">#2EFF7A1A</color> <!-- rgba(255,122,26,0.18) -->
+
+    <color name="heading">#142A5B</color>
+    <color name="text">#23335B</color>
+    <color name="muted">#5F6C8A</color>
+
+    <color name="bg">#FFFFFF</color>
+    <color name="surface">#F8F9FF</color>
+    <color name="surfaceAlt">#EDF1FF</color>
+
+    <color name="border">#1423335B</color>  <!-- rgba(35,51,91,0.08) -->
+    <color name="borderInput">#1E23335B</color> <!-- rgba(35,51,91,0.12) -->
+
+    <color name="starYellow">#F5A623</color>
+    <color name="successGreen">#34C759</color>
+    <color name="successBg">#1E34C759</color>
+    <color name="errorRed">#EF4444</color>
+
+    <color name="footerDark">#080F2D</color>
+    <color name="footerMid">#121D42</color>
+    <color name="footerCard">#05FFFFFF</color> <!-- rgba(255,255,255,0.02) -->
+    <color name="footerText">#BFC8D9</color>  <!-- rgba(255,255,255,0.75) -->
+    <color name="footerTextBright">#F5F7FB</color>
+
+    <color name="splashBg">#FF7A1A</color>
+
+    <!-- Legacy aliases for backward compat -->
+    <color name="textDark">#142A5B</color>
+    <color name="bgLight">#F8F9FF</color>
+    <color name="textBlue">#142A5B</color>
+    <color name="textGray">#5F6C8A</color>
+</resources>

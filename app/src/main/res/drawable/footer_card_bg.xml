@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website footer: .footer-top { background: rgba(255,255,255,0.02); border-radius: 24px; border: 1px solid rgba(255,255,255,0.08) } -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#05FFFFFF"/>
+    <corners android:radius="24dp"/>
+    <stroke android:width="1dp" android:color="#14FFFFFF"/>
+</shape>

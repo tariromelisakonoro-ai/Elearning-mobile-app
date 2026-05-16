@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website: .feature-card { background: var(-surface); border: 1px solid rgba(35,51,91,0.08); border-radius: 24px; padding: 1.5rem } -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Website: .card-icon-circle { width: 3.5rem; border-radius: 50%; background: rgba(255,122,26,0.1) } -->
+        <!-- Using CardView to allow programmatic color changes in Java -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvIconContainer"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#1AFF7A1A">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Website: .feature-card h3 { color: var(-heading) } -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="What is it?"
+            android:textColor="@color/heading"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Website: .feature-card p { color: var(-muted); line-height: 1.75 } -->
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="An all-in-one platform combining lessons, assignments, quizzes, and study resources."
+            android:textColor="@color/muted"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Website: .card-cta { color: var(-primary); font-weight: 700 } -->
+        <TextView
+            android:id="@+id/tvAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="See Courses →"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

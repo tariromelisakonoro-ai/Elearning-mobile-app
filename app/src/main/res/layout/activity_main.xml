@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- Top Navigation Bar: Website .site-header { sticky, top: 0 } -->
+    <include
+        android:id="@+id/nav_bar"
+        layout="@layout/nav_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nav_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ===========================================
+                 HERO SECTION
+                 Website: .hero-section { padding: 10rem 0; background-image with overlay; text-align: center }
+                 =========================================== -->
+            <ImageView
+                android:id="@+id/ivHeroBackground"
+                android:layout_width="match_parent"
+                android:layout_height="520dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Hero background" />
+
+            <!-- Website: .hero-section::after { background: rgba(7,20,41,0.2) } + main overlay -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="520dp"
+                android:background="#A6071429" />
+
+            <!-- Hero Content: centered, white text -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="520dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Website: .eyebrow { text-transform: uppercase; letter-spacing: 0.24em; color: #fff } -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WELCOME TO YOUR FUTURE CLASSROOM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.24"
+                    android:textAllCaps="true" />
+
+                <!-- Website: .hero-copy h1 { font-size: clamp(2.5rem,4vw,4rem); color: #fff; line-height: 1.05 } -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Learn smarter, stay motivated, and\ncrush your goals."
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:lineSpacingMultiplier="1.05" />
+
+                <!-- Website: .hero-copy p { color: rgba(255,255,255,0.85); line-height: 1.75 } -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="24dp"
+                    android:text="LearnExpress brings your high school life together in one place: courses, assignments, exams, resources, community and a demo dashboard built just for you."
+                    android:textColor="#D9FFFFFF"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp" />
+
+                <!-- Website: .hero-actions { display: flex; gap: 1rem; justify-content: center } -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!-- Website: .btn-primary { background: var(-primary); border-radius: 999px } -->
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSignUpFree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:background="@drawable/btn_orange"
+                            android:paddingHorizontal="20dp"
+                            android:text="Sign Up Free"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:elevation="4dp" />
+
+                        <!-- Website: .btn-secondary { background: rgba(255,255,255,0.95); color: var(-heading) } -->
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSignIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/btn_gray"
+                            android:paddingHorizontal="20dp"
+                            android:text="Sign In"
+                            android:textAllCaps="false"
+                            android:textColor="@color/heading"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnBrowseCourses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/btn_gray"
+                        android:paddingHorizontal="20dp"
+                        android:text="Browse Courses"
+                        android:textAllCaps="false"
+                        android:textColor="@color/heading"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Main Content Container (below hero) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="520dp"
+                android:orientation="vertical">
+
+                <!-- ===========================================
+                     IMAGE STRIP / FEATURE CARDS
+                     Website: .image-strip { padding: 3rem 0 1rem }
+                     =========================================== -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="8dp"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="12dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/featureLearnAnytime"
+                            layout="@layout/item_feature_card" />
+
+                        <include
+                            android:id="@+id/featureStayFocused"
+                            layout="@layout/item_feature_card" />
+
+                        <include
+                            android:id="@+id/featureCollaborate"
+                            layout="@layout/item_feature_card" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!-- ===========================================
+                     COMPANION SECTION
+                     Website: .feature-section { padding: 4rem 0 }
+                     =========================================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <!-- Website: .section-heading h2 { font-size: 2rem; color: var(-heading) } -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Your Ultimate High School Companion"
+                        android:textColor="@color/heading"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <!-- Website: .section-heading p { color: var(-muted) } -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="LearnExpress is a digital learning hub exclusively designed for high school students. We give you the right tools to turn study struggles into success stories."
+                        android:textColor="@color/muted"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:scrollbars="none"
+                        android:clipToPadding="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include
+                                android:id="@+id/infoWhatIsIt"
+                                layout="@layout/item_info_card" />
+
+                            <include
+                                android:id="@+id/infoWhoIsItFor"
+                                layout="@layout/item_info_card" />
+
+                            <include
+                                android:id="@+id/infoWhyCare"
+                                layout="@layout/item_info_card" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- ===========================================
+                     COURSE CATEGORIES
+                     Website: .section-alt { background: rgba(255,255,255,0.03); padding: 4rem 0 }
+                     =========================================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Find the Right Course for You"
+                        android:textColor="@color/heading"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Explore a variety of subjects designed to match your school syllabus."
+                        android:textColor="@color/muted"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:scrollbars="none"
+                        android:clipToPadding="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include
+                                android:id="@+id/courseMath"
+                                layout="@layout/item_info_card" />
+
+                            <include
+                                android:id="@+id/courseScience"
+                                layout="@layout/item_info_card" />
+
+                            <include
+                                android:id="@+id/courseHumanities"
+                                layout="@layout/item_info_card" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- Website: .btn-primary { border-radius: 999px } -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnViewAllCourses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/btn_orange"
+                        android:paddingHorizontal="28dp"
+                        android:text="View All Courses"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:elevation="4dp" />
+
+                </LinearLayout>
+
+                <!-- ===========================================
+                     HOW IT WORKS
+                     Website: .feature-section { padding: 4rem 0 }
+                     =========================================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="How It Works"
+                        android:textColor="@color/heading"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Three simple steps to supercharge your study routine."
+                        android:textColor="@color/muted"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:scrollbars="none"
+                        android:clipToPadding="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include
+                                android:id="@+id/stepSignUp"
+                                layout="@layout/item_step_card" />
+
+                            <include
+                                android:id="@+id/stepLearn"
+                                layout="@layout/item_step_card" />
+
+                            <include
+                                android:id="@+id/stepTrack"
+                                layout="@layout/item_step_card" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- ===========================================
+                     TESTIMONIALS
+                     Website: .section-alt { padding: 4rem 0 }
+                     =========================================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't Just Take Our Word For It"
+                        android:textColor="@color/heading"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="Join thousands of students who are already learning better."
+                        android:textColor="@color/muted"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="12dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include
+                                android:id="@+id/testimonial1"
+                                layout="@layout/item_testimonial" />
+
+                            <include
+                                android:id="@+id/testimonial2"
+                                layout="@layout/item_testimonial" />
+
+                            <include
+                                android:id="@+id/testimonial3"
+                                layout="@layout/item_testimonial" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <!-- ===========================================
+                     FOOTER
+                     Website: .site-footer { background: linear-gradient(180deg, #080f2d, #121d42, #0b1440); padding: 2.5rem 0 }
+                     =========================================== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/footer_bg"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Website: .footer-top { background: rgba(255,255,255,0.02); border-radius: 24px; border: 1px solid rgba(255,255,255,0.08) } -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/footer_card_bg"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <!-- Brand Column -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LearnExpress"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <!-- Website: .footer-tagline { color: rgba(255,255,255,0.75) } -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Trusted learning support for students, teachers, and parents."
+                                android:textColor="@color/footerText"
+                                android:textSize="14sp"
+                                android:lineSpacingExtra="3dp" />
+                        </LinearLayout>
+
+                        <!-- Social + Contact Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:baselineAligned="false">
+
+                            <!-- Socials Column -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Follow us:"
+                                    android:textColor="@color/footerText"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="Twitter"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="LinkedIn"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Facebook"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <!-- Contact Column -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.3"
+                                android:orientation="vertical">
+
+                                <!-- Phone -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:background="@drawable/footer_icon_bg">
+                                        <ImageView
+                                            android:layout_width="14dp"
+                                            android:layout_height="14dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_phone"
+                                            app:tint="#FFFFFF" />
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="+260 777 187 897"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
+                                <!-- Email -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:background="@drawable/footer_icon_bg">
+                                        <ImageView
+                                            android:layout_width="14dp"
+                                            android:layout_height="14dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_email"
+                                            app:tint="#FFFFFF" />
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="infor@new25.co.zw"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
+                                <!-- Location -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:background="@drawable/footer_icon_bg">
+                                        <ImageView
+                                            android:layout_width="14dp"
+                                            android:layout_height="14dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_location"
+                                            app:tint="#FFFFFF" />
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="Melisa House, 107 Kasupe Road"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Website: .footer-inner { copyright row } -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="© 2026 LearnExpress. Built for high school students who want to stay ahead."
+                            android:textColor="@color/footerText"
+                            android:textSize="12sp"
+                            android:lineSpacingExtra="2dp" />
+
+                        <TextView
+                            android:id="@+id/tvBackToTop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Back to top"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

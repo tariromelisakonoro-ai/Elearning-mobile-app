@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website: .footer-icon { border-radius: 0.85rem; background: rgba(255,255,255,0.08) } -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#14FFFFFF"/>
+    <corners android:radius="14dp"/>
+</shape>

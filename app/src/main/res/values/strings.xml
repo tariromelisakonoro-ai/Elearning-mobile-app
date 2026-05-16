@@ -1,0 +1,241 @@
+<resources>
+    <string name="app_name">Learn-Express</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_account">Already have an account? Login</string>
+
+    <string name="brand_name">LearnExpress</string>
+    <string name="sign_in_title">Sign in to LearnExpress</string>
+    <string name="sign_in_subtitle">Enter your email and password to continue to the learning experience.</string>
+    <string name="email_address_label">Email address</string>
+    <string name="email_hint">name@example.com</string>
+    <string name="password_label">Password</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="new_here_signup">New here? Sign up</string>
+    <string name="or_sign_in_with">  OR SIGN IN WITH  </string>
+    <string name="google">Google</string>
+    <string name="github">GitHub</string>
+
+    <string-array name="roles_array">
+        <item>Student</item>
+        <item>Instructor</item>
+        <item>Administrator</item>
+        <item>Parent</item>
+    </string-array>
+
+    <!-- Navigation Strings -->
+    <string name="nav_home">Home</string>
+    <string name="nav_courses">Courses</string>
+    <string name="nav_assignments">Assignments</string>
+    <string name="nav_exams">Exams</string>
+    <string name="nav_resources">Resources</string>
+    <string name="nav_community">Community</string>
+    <string name="nav_dashboard">Dashboard</string>
+
+    <string name="quick_actions">Quick Actions</string>
+    <string name="assignments">Assignments</string>
+    <string name="exams">Exams</string>
+    <string name="resources">Resources</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="performance_overview">Performance Overview</string>
+    <string name="gpa">GPA</string>
+    <string name="attendance">Attendance</string>
+    <string name="credits">Credits</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="form_class">Form / Class</string>
+    <string name="level">Level</string>
+    <string name="email_label">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="status">Status</string>
+    <string name="my_courses">My Courses</string>
+    <string name="explore_new_courses">Explore New Courses</string>
+    <string name="math_assignment_due">Math Assignment Due</string>
+    <string name="deadline_math">Deadline: Oct 25, 2024</string>
+    <string name="physics_lab_report">Physics Lab Report</string>
+    <string name="deadline_physics">Deadline: Oct 28, 2024</string>
+    <string name="outstanding_balance">Outstanding Balance</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="student_role">STUDENT</string>
+    <string name="info_banner_text">Everything you need is right here: course access, instructor tools, account approvals, and progress insights for your role.</string>
+
+    <string name="welcome_user">Welcome, Tarirokonoro</string>
+    <string name="gpa_value">3.8</string>
+    <string name="attendance_value">95%</string>
+    <string name="credits_value">18</string>
+    <string name="profile_initial">T</string>
+    <string name="profile_name">Tarirokonoro</string>
+    <string name="reg_no_value">LE-2024-001</string>
+    <string name="class_value">Form 4A</string>
+    <string name="level_value">Advanced</string>
+    <string name="email_value">tarirokonoro@gmail.com</string>
+    <string name="phone_value">+1 234 567 890</string>
+    <string name="status_active">Active</string>
+    <string name="course_math">Advanced Mathematics</string>
+    <string name="course_math_info">Instructor: Dr. Smith | Status: Enrolled</string>
+    <string name="progress_75">75% Complete</string>
+    <string name="financial_summary">Financial Summary</string>
+    <string name="balance_value">$250.00</string>
+    <string name="course_cs">Computer Science</string>
+    <string name="course_cs_desc">Basics of programming.</string>
+    <string name="price_49">$49.00</string>
+    <string name="course_dm">Digital Marketing</string>
+    <string name="course_dm_desc">Master SEO and Social Media.</string>
+    <string name="free">FREE</string>
+    <string name="upcoming_tasks">Upcoming Tasks</string>
+
+    <!-- Instructor strings -->
+    <string name="instructor_role">INSTRUCTOR</string>
+    <string name="active_courses">Active Courses</string>
+    <string name="total_students">Total Students</string>
+    <string name="avg_performance">Avg. Performance</string>
+    <string name="manage_assignments">Manage Assignments</string>
+    <string name="grade_submissions">Grade Submissions</string>
+    <string name="create_course">Create Course</string>
+    <string name="view_reports">View Reports</string>
+    <string name="welcome_instructor">Welcome, Mr. Phiri</string>
+    <string name="active_courses_count">5 Active</string>
+    <string name="students_count">120 Students</string>
+    <string name="performance_value">78%</string>
+
+    <!-- Admin strings -->
+    <string name="admin_role">ADMINISTRATOR</string>
+    <string name="user_management">User Management</string>
+    <string name="system_health">System Health</string>
+    <string name="pending_approvals">Pending Approvals</string>
+    <string name="manage_users">Manage Users</string>
+    <string name="system_settings">System Settings</string>
+    <string name="audit_logs">Audit Logs</string>
+    <string name="welcome_admin">Welcome, Admin</string>
+    <string name="users_count">450 Users</string>
+    <string name="system_status_ok">System OK</string>
+    <string name="approvals_count">12 Pending</string>
+
+    <!-- Parent strings -->
+    <string name="parent_role">PARENT</string>
+    <string name="children_progress">Children\'s Progress</string>
+    <string name="view_attendance">View Attendance</string>
+    <string name="school_fees">School Fees</string>
+    <string name="messages_from_school">Messages from School</string>
+    <string name="view_report_cards">View Report Cards</string>
+    <string name="welcome_parent">Welcome, Mrs. Moyo</string>
+    <string name="child_name">Tariro Konoro</string>
+    <string name="child_grade">Form 4A</string>
+
+    <!-- Feature Section Strings -->
+    <string name="feature_learn_anytime_title">Learn anytime</string>
+    <string name="feature_learn_anytime_desc">Flexible lessons and interactive tools built for your schedule.</string>
+    <string name="feature_explore_courses">Explore Courses →</string>
+
+    <string name="feature_stay_focused_title">Stay focused</string>
+    <string name="feature_stay_focused_desc">Study with clear guides, quick summaries, and visual progress tracking.</string>
+    <string name="feature_view_resources">View Resources →</string>
+
+    <string name="feature_collaborate_title">Collaborate easily</string>
+    <string name="feature_collaborate_desc">Share ideas, compare notes, and grow with peers in a safe place.</string>
+    <string name="feature_join_community">Join Community →</string>
+
+    <!-- Info Section Strings -->
+    <string name="info_what_is_it_title">What is it?</string>
+    <string name="info_what_is_it_desc">An all-in-one platform combining lessons, assignments, quizzes, and study resources tailored to your curriculum.</string>
+    <string name="info_see_courses">See Courses →</string>
+
+    <string name="info_who_is_it_for_title">Who is it for?</string>
+    <string name="info_who_is_it_for_desc">High schoolers who want to study smarter, stay organized, and crush their academic goals without the stress.</string>
+    <string name="info_join_now">Join Now →</string>
+
+    <string name="info_why_care_title">Why care?</string>
+    <string name="info_why_care_desc">Because your time is valuable. LearnExpress helps you finish homework faster, ace exams, and get your free time back.</string>
+    <string name="info_get_started">Get Started →</string>
+
+    <!-- Course Section Strings -->
+    <string name="course_math_title">Mathematics</string>
+    <string name="course_math_desc">Algebra, Geometry, Calculus, and everything in between.</string>
+    <string name="course_browse_math">Browse Math →</string>
+
+    <string name="course_science_title">Sciences</string>
+    <string name="course_science_desc">Biology, Chemistry, and Physics explained simply.</string>
+    <string name="course_browse_science">Browse Sciences →</string>
+
+    <string name="course_humanities_title">Humanities</string>
+    <string name="course_humanities_desc">History, Literature, and Languages to expand your mind.</string>
+    <string name="course_browse_humanities">Browse Humanities →</string>
+
+    <!-- How It Works Section Strings -->
+    <string name="step_signup_title">Sign Up \u0026 Set Up</string>
+    <string name="step_signup_desc">Create your free account and pick the subjects you\u0027re focusing on this semester.</string>
+    <string name="step_create_account">Create Account →</string>
+
+    <string name="step_learn_title">Learn \u0026 Practice</string>
+    <string name="step_learn_desc">Watch video lessons, read study guides, and test your knowledge with interactive quizzes.</string>
+    <string name="step_explore_lessons">Explore Lessons →</string>
+
+    <string name="step_track_title">Track Progress</string>
+    <string name="step_track_desc">Use your personalized dashboard to monitor your grades, streaks, and upcoming deadlines.</string>
+    <string name="step_see_dashboard">See Dashboard →</string>
+
+    <!-- Testimonials Section -->
+    <string name="testimonials_title">Don\'t Just Take Our Word For It</string>
+    <string name="testimonials_subtitle">Join thousands of students who are already learning better.</string>
+
+    <string name="testimonial1_quote">\"LearnExpress helped me bring my math grade from a C to an A! The practice quizzes are a lifesaver.\"</string>
+    <string name="testimonial1_name">Sarah M.</string>
+    <string name="testimonial1_details">11th Grade · Harare</string>
+    <string name="testimonial1_initials">SM</string>
+
+    <string name="testimonial2_quote">\"Having all my assignments and deadlines in one place means I actually get to sleep before midnight now.\"</string>
+    <string name="testimonial2_name">David K.</string>
+    <string name="testimonial2_details">12th Grade · Bulawayo</string>
+    <string name="testimonial2_initials">DK</string>
+
+    <string name="testimonial3_quote">\"The study guides are straight to the point. Exactly what you need right before a big history exam.\"</string>
+    <string name="testimonial3_name">Chloe T.</string>
+    <string name="testimonial3_details">10th Grade · Mutare</string>
+    <string name="testimonial3_initials">CT</string>
+
+    <!-- Community Activity Strings -->
+    <string name="select_subject_area">Select a subject area</string>
+    <string name="select_subject_area_placeholder">Select a subject area...</string>
+    <string name="showing_questions">Showing %d community questions</string>
+    <string name="could_not_load_questions">Could not load questions.</string>
+    <string name="latest_announcements_count">Latest updates: %d announcements active</string>
+    <string name="could_not_load_announcements">Could not load announcements.</string>
+    <string name="collab_weekly_title">Weekly Challenges</string>
+    <string name="collab_weekly_desc">Compete in topic quizzes, earn badges, and track your rank among peers.</string>
+    <string name="collab_teacher_title">Teacher Interaction</string>
+    <string name="collab_teacher_desc">Send questions directly to instructors and get expert guidance and feedback.</string>
+    <string name="collab_live_title">Live Sessions</string>
+    <string name="collab_live_desc">Join scheduled teacher-led sessions for exam tips and model answers.</string>
+    <string name="collab_buddy_title">Study Buddies</string>
+    <string name="collab_buddy_desc">Get matched with learners who share your exam goals for peer revision.</string>
+    <string name="explore_courses_title">Browse Courses</string>
+    <string name="explore_courses_desc">Find lessons that match your discussion topics and group work needs.</string>
+    <string name="go_to_courses">Go to Courses</string>
+    <string name="explore_assignments_title">Assignments</string>
+    <string name="explore_assignments_desc">Share assignment challenges with the community and get peer encouragement.</string>
+    <string name="view_assignments">View Assignments</string>
+    <string name="explore_exams_title">Exams \u0026 Quizzes</string>
+    <string name="explore_exams_desc">Prepare together, share strategies, and review results with classmates.</string>
+    <string name="open_exams">Open Exams</string>
+    <string name="explore_resources_title">Study Resources</string>
+    <string name="explore_resources_desc">Access instructor-uploaded materials and share them with your study group.</string>
+    <string name="view_resources">View Resources</string>
+    <string name="fill_all_fields">Please fill in all fields</string>
+    <string name="question_posted_success">Question posted successfully!</string>
+    <string name="filtering_feed">Filtering feed...</string>
+
+    <string-array name="subjects_array">
+        <item>Mathematics</item>
+        <item>Sciences</item>
+        <item>English</item>
+        <item>History</item>
+        <item>Business</item>
+        <item>Computer Sci</item>
+        <item>Other</item>
+    </string-array>
+</resources>

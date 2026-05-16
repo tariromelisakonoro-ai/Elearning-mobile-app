@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website: .image-card { background: var(-surface); border: 1px solid rgba(35,51,91,0.08); border-radius: 18px; overflow: hidden } -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Website: .image-card img { height: 190px; object-fit: cover } -->
+        <ImageView
+            android:id="@+id/ivFeatureImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/learn_anytime" />
+
+        <!-- Website: .image-card h3 { font-size: 1.15rem; color: var(-heading) } -->
+        <TextView
+            android:id="@+id/tvFeatureTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Learn anytime"
+            android:textColor="@color/heading"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Website: .image-card p { color: var(-muted); line-height: 1.7 } -->
+        <TextView
+            android:id="@+id/tvFeatureDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Flexible lessons and interactive tools built for your schedule."
+            android:textColor="@color/muted"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Website: .card-cta { color: var(-primary); font-weight: 700 } -->
+        <TextView
+            android:id="@+id/tvFeatureLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="16dp"
+            android:text="Explore Courses →"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

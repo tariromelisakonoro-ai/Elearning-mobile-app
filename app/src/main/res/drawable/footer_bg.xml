@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website footer: background: linear-gradient(180deg, #080f2d 0%, #121d42 55%, #0b1440 100%) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#080F2D"
+        android:centerColor="#121D42"
+        android:endColor="#0B1440"
+        android:angle="270" />
+</shape>

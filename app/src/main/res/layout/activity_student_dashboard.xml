@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <include layout="@layout/nav_header" />
+
+    <LinearLayout
+        android:id="@+id/bannerParentViewing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF3E6"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Viewing as Parent"
+            android:textColor="#5F6C8A"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tvParentNameBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👤 Parent"
+            android:textColor="#142A5B"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnBackToParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF7A1A"
+            android:text="← Back to Parent Dashboard"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/surface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="Welcome to LearnExpress!"
+                android:textColor="@color/primary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Profile Overview Card (Using website summary banner bg) -->
+            <LinearLayout
+                android:id="@+id/cardProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/summary_banner_bg"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/avatar_bg">
+                    <ImageView
+                        android:id="@+id/ivStudentProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/student_dashboard" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvStudentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Student Name"
+                    android:textColor="@color/heading"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStudentRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Student"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStudentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="student@email.com"
+                    android:textColor="@color/muted"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+                <!-- Personal Information Grid -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:columnCount="2"
+                    android:padding="16dp"
+                    android:background="@drawable/card_bg">
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Form / Class" android:textColor="@color/heading" android:textStyle="bold" android:layout_margin="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Form 4A" android:textColor="@color/muted" android:layout_margin="8dp" android:gravity="end" />
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Level" android:textColor="@color/heading" android:textStyle="bold" android:layout_margin="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="O-Level" android:textColor="@color/muted" android:layout_margin="8dp" android:gravity="end" />
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Year &amp; Term" android:textColor="@color/heading" android:textStyle="bold" android:layout_margin="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="2026, Term 3" android:textColor="@color/muted" android:layout_margin="8dp" android:gravity="end" />
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Status" android:textColor="@color/heading" android:textStyle="bold" android:layout_margin="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="Active" android:textColor="@color/successGreen" android:background="@drawable/input_bg" android:backgroundTint="@color/successBg" android:paddingHorizontal="8dp" android:paddingVertical="2dp" android:layout_margin="8dp" android:gravity="center" />
+                </GridLayout>
+            </LinearLayout>
+
+            <!-- Dashboard Sections -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <!-- Row 1: My Courses & Enrollment Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/btnMyCourses"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_bg"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My Courses" android:textColor="@color/heading" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvMyCoursesDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="No active courses to track." android:textColor="@color/muted" android:textSize="12sp" android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <View android:layout_width="16dp" android:layout_height="1dp" />
+
+                    <LinearLayout
+                        android:id="@+id/btnEnrollmentStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_bg"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enrollment" android:textColor="@color/heading" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvEnrollmentDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="You have not enrolled yet." android:textColor="@color/muted" android:textSize="12sp" android:textStyle="italic" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Quick Access -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/card_bg"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quick Access" android:textColor="@color/heading" android:textSize="16sp" android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/btnQuickAssignments"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_orange"
+                                android:paddingHorizontal="16dp"
+                                android:paddingVertical="8dp"
+                                android:text="Assignments"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                            <View android:layout_width="12dp" android:layout_height="1dp" />
+                            <TextView
+                                android:id="@+id/btnQuickExams"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_orange"
+                                android:paddingHorizontal="16dp"
+                                android:paddingVertical="8dp"
+                                android:text="Exams &amp; Quizzes"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                            <View android:layout_width="12dp" android:layout_height="1dp" />
+                            <TextView
+                                android:id="@+id/btnQuickResources"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_gray"
+                                android:paddingHorizontal="16dp"
+                                android:paddingVertical="8dp"
+                                android:text="Study Resources"
+                                android:textColor="@color/heading"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- Performance Card -->
+                <LinearLayout
+                    android:id="@+id/cardPerformance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/card_bg"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Performance" android:textColor="@color/heading" android:textSize="16sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Academic standing" android:textColor="@color/muted" android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A-" android:textColor="@color/primary" android:textSize="24sp" android:textStyle="bold" />
+                            <View android:layout_width="16dp" android:layout_height="1dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="92%" android:textColor="@color/heading" android:textSize="24sp" android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnViewResults"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/btn_orange"
+                        android:padding="12dp"
+                        android:text="View Full Results"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- Upcoming Tasks -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/card_bg"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upcoming Tasks" android:textColor="@color/heading" android:textSize="16sp" android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:id="@+id/containerTasksHorizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <!-- Tasks populated here -->
+                            <TextView android:id="@+id/tvNoTasks" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No upcoming tasks." android:textColor="@color/muted" android:textSize="12sp" android:textStyle="italic" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- Available Courses Card -->
+                <LinearLayout
+                    android:id="@+id/btnAvailableCourses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/card_bg"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Available Courses" android:textColor="@color/heading" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Discover and enroll in new subjects." android:textColor="@color/muted" android:textSize="12sp" android:textStyle="italic" />
+                    
+                    <LinearLayout
+                        android:id="@+id/containerAvailableList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+                        <TextView android:id="@+id/tvAvailableDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No courses available for enrollment." android:textColor="@color/muted" android:textSize="14sp" android:textStyle="italic" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Payments Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_bg"
+                    android:orientation="horizontal"
+                    android:padding="24dp"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Balance Remaining" android:textColor="@color/muted" android:textSize="12sp" android:textStyle="italic" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="$1,200.00" android:textColor="@color/heading" android:textSize="24sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/btnViewInvoices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_gray"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="10dp"
+                        android:text="View Invoices"
+                        android:textColor="@color/heading"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="40dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
